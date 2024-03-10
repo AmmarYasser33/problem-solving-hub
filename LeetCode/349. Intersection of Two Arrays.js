@@ -4,6 +4,18 @@
  * @return {number[]}
  */
 var intersection = function (nums1, nums2) {
+  const set = new Set(nums1);
+  let result = [];
+
+  for (const n of set) {
+    if (nums2.includes(n)) {
+      result.push(n);
+    }
+  }
+
+  return result;
+
+  /*
   const freq1 = new Map();
   const freq2 = new Map();
 
@@ -16,6 +28,7 @@ var intersection = function (nums1, nums2) {
   }
 
   return result;
+*/
 };
 
 // console.log(intersection([1, 2, 2, 1], [2, 2])); // [2]
